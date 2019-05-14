@@ -1,0 +1,44 @@
+<view class='wrap'>
+  <view class='header'>
+    <view class='serach-bar'>
+      <form>
+        <image bindtap='handleBack' class='house' mode="aspectFit" src='https://static.zhipin.com/zhipin/v154/h5/wap/images/icon-home.png'></image>
+        <view class='city'>
+          <picker mode="region">{{city}}
+          <image class='icon' mode="aspectFit" src='/assets/imgs/below.png'></image>
+          </picker>
+        </view>
+        <input class='ipt-search' value='{{iptval}}' placeholder="搜索职位"></input>
+        <button class='btn-search'>搜索</button>
+      </form>
+    </view>
+    <view class='filter-bar'>
+      <view class='ul'>
+        <view class='li' wx:for="{{navlist}}" wx:for-index="idx" wx:for-item="itemName" wx:key="{{idx}}" bindtap='handleClass' data-name='{{itemName.name}}' data-data='{{itemName.txt}}'><text class='{{pitch==itemName.name?"selected":""}}'>{{itemName.name}}</text>
+          <image mode="aspectFit" src='/assets/imgs/below.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='filter-content' style='display:{{dispaly}}'>
+      <view class='scroller'>
+        <view class='ul'>
+          <view class='li {{index==0?"selected":""}}' wx:for="{{data}}" wx:key="{{index}}">{{item}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='main'>
+        <view class='job-item' wx:for="{{joblist}}" wx:key="{{item.jobid}}" wx:if="{{index<num}}" bindtap="handleDetail" data-id="{{item.jobid}}">
+          <image src='{{item.logo}}'></image>
+          <view class='text'>
+            <view class='title'>
+              <text class='h4'>{{item.position}}</text>
+              <text class='salary'>{{item.pay}}</text>
+            </view>
+            <view class='name'>{{item.company}}</view>
+            <view class='msg'>{{item.region}}   {{item.experience}}   {{item.education}}</view>
+          </view>
+        </view>
+        <button bindtap='handleAdd'>加载更多</button>
+  </view>
+</view>

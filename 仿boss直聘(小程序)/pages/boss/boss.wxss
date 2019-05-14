@@ -1,0 +1,157 @@
+.wrap {
+  min-height: 100%;
+}
+
+.home-banner {
+  width: 100%;
+  height: 196px;
+  display: block;
+  background: url(https://static.zhipin.com/zhipin/v154/h5/wap/images/home-bg.png)center center no-repeat;
+  color: #fff;
+  text-align: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.home-banner .banner-a {
+  height: 138px;
+}
+
+.home-banner .banner-a image {
+  height: 100%;
+}
+
+.search {
+  float: none;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 138px;
+}
+
+.search .ipt-search {
+  margin: 0 auto;
+  width: 90%;
+  height: 37px;
+  line-height: 32px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  color: #aeaeae;
+  text-align: left;
+  padding-left: 20px;
+  background: #fff;
+}
+
+.search .btn-search {
+  background-color: #fff;
+  color: #5bd4c7;
+  font-size: 14px;
+  position: absolute;
+  border: 0;
+  width: 60px;
+  bottom: 1px;
+  right: 20px;
+  z-index: 99;
+}
+
+.search .btn-search::after {
+  border: none;
+}
+
+.main {
+  position: relative;
+}
+
+.job-category .job-item image {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  vertical-align: middle;
+  float: left;
+}
+
+.job-category .job-item .job-title {
+  font-size: 15px;
+  line-height: 90px;
+}
+
+.job-category .job-item .job-dl {
+  margin: 0 15px;
+  color: #525252;
+  font-size: 18px;
+}
+
+.job-category .job-item .job-dl view {
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #7e8793;
+  line-height: 13px;
+  background: #f5f8f9;
+  border-radius: 100px;
+  margin: 0 8px 8px 0;
+  display: inline-block;
+}
+
+.report-tips {
+  line-height: 18px;
+  color: #919aa7;
+  font-size: 12px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.report-tips  view {
+  margin: 0 auto;
+}
+
+.h {
+  width: 100%;
+  height: 100px;
+}
+
+.download-bar {
+  width: 100%;
+  height: 56px;
+  background: -webkit-gradient(linear, center top, center bottom, from(#22dccf), to(#19c7c6));
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: height 0.5s;
+}
+
+.download-bar .logo-text {
+  margin-left: 18px;
+  margin-right: 105px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.download-bar .logo-text image {
+  width: 42px;
+  height: 42px;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.download-bar .logo-text text {
+  display: inline-block;
+  line-height: 23px;
+  vertical-align: 5px;
+}
+.download-bar .btn-register{
+    float: right;
+    margin-right: 18px;
+    width: 81px;
+    height: 32px;
+    background-color: #fff;
+    color: #5dd5ca;
+    font-size: 13px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 32px;
+    margin-top: -40px;
+}

@@ -1,0 +1,18 @@
+{
+  "pages": [
+    
+    "pages/boss/boss",
+    "pages/details/details",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

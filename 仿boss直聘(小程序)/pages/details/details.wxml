@@ -1,0 +1,115 @@
+<view class="wrap">
+  <view class='header'>
+    <view class='logo'>
+      <image mode='aspectFit' src='https://static.zhipin.com/zhipin/v154/h5/wap/images/logo.png'></image>
+    </view>
+    <view class='top-search' bindtap='handleSearch'>
+      <view class='ipt-wrap'></view>
+      <view class='link-search'>搜索职位</view>
+      <image class='icon-search' mode='aspectFit' src='/assets/imgs/search.png'></image>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='job-banner'>
+      <view class='name'>
+        <text class='post'>{{jobitem.position}}</text>
+        <text class='salary'>{{jobitem.pay}}</text>
+      </view>
+      <view class='vline'> {{jobitem.region}} | {{jobitem.experience}} | {{jobitem.education}}</view>
+      <view class='job-tags'>
+        <view class='span' wx:for="{{jobitem.demand}}" wx:key="{{index}}">{{item}}</view>
+      </view>
+    </view>
+    <view class='job-author' wx:for="{{jobitem.linkman}}" wx:for-item="itN" wx:key="{{index}}">
+      <view class='figure'>
+        <image class='head' mode='aspectFit' src='{{itN.pic}}'></image>
+      </view>
+      <view class='info-primary'>
+        <view class='name'>{{itN.call}}</view>
+        <view class='link-like'>
+          <image mode='aspectFit' src='https://static.zhipin.com/zhipin/v154/h5/wap/images/link-like.png' class='link-icon'></image>
+          感兴趣
+        </view>
+        <view class='gray'>{{jobitem.company}} · {{itN.post}}</view>
+      </view>
+      <button class='btn-com' bindtap='handleRegister'>立即沟通</button>
+    </view>
+    <view class='job-detail'>
+      <view class='job-sec'>
+        <view class='h3'>职位描述
+        </view>
+        <text class='text'>
+        <text wx:for="{{jobitem.jobdescription}}" wx:key="{{index}}">{{item}}\n</text>
+        </text>
+      </view>
+      <view class='reqular-box job-sec'>
+        <view class='h3'>公司介绍</view>
+        <view class='detail-text'>
+          <text>{{jobitem.companyinfo}}</text>
+
+        </view>
+        <view class='view-more'>
+          <view class='detail-layer'></view>
+          查看全部</view>
+      </view>
+      <view class='reqular-box job-sec'>
+        <view class='h3'>工商信息</view>
+        <view class='business-info' wx:for="{{jobitem.Iacinfo}}" wx:key="{{index}}">
+          <view class='h4'>{{item.name}}</view>
+          <view class='business-detail'>
+            <view>法人代表：{{item.legal}}</view>
+            <view>注册资本：{{item.capital}}</view>
+            <view>成立时间：{{item.createtime}}</view>
+            <view>经营状态：{{item.state}}</view>
+          </view>
+          <button class='view-business'>展开
+            <image src='/assets/imgs/below.png'></image>
+          </button>
+        </view>
+      </view>
+      <view class='job-sec'>
+        <view class='h3'>工作地址</view>
+        <view>
+
+          <view class='location-address'>
+            <image class='location' mode='aspectFit' src='/assets/imgs/location.png'></image>
+            天府软件园G8</view>
+          <map longitude="104.055048" latitude="30.5374435" scale='18' markers="{{markers}}"></map>
+        </view>
+      </view>
+    </view>
+    <view class='job-company'>
+      <view class='company-logo'>
+        <image src='{{jobitem.logo}}'></image>
+      </view>
+      <view class='info-primary' wx:for="{{jobitem.scale}}" wx:key="{{index}}">
+        <view class='flex-box'>
+          <view class='name'>{{jobitem.company}}</view>
+          <button bindtap='handleFous'>{{type==0?"关注该公司":"已关注"}}</button>
+        </view>
+        <view class='company'>{{item.name}}</view>
+        <view class='gray'>
+        <text space='ensp'>{{item.gray}}  |  {{item.investor}}  |  {{item.people}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='job-recomend'>
+      <view class='h3'>相似职位</view>
+      <view class='job-item' wx:for="{{jobitem.similarity}}" wx:key="{{index}}">
+         <view class='job-logo'>
+           <image src='{{item.logo}}'></image>
+         </view>
+         <view class='info-primary'>
+           <view class='name'>
+             <view class='txt'>{{item.position}}</view>
+             <view class='red'>{{item.pay}}</view>
+           </view>
+           <view class='flex-box'>
+             <view class='company-info'>{{item.company}}·{{item.region}}</view>
+             <button class='btn-commont' bindtap='handleRegister'>立即沟通</button>
+           </view>
+         </view>
+      </view>
+    </view>
+  </view>
+</view>

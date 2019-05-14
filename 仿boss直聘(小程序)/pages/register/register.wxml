@@ -1,0 +1,29 @@
+<view class='wrap'>
+  <view class='h3'>{{islogin==0?"注册":"登录"}}BOSS直聘</view>
+  <form>
+    <view class='form-row'>
+      <image class='phone' src='/assets/imgs/moble.png'></image>
+      <view class='dropdown-select'>+86
+        <image src='/assets/imgs/below.png'></image>
+      </view>
+      <input class='ipt-tel' placeholder='手机号'></input>
+    </view>
+  </form>
+  <movable-area class="content" style="width:{{area_width}}%">
+    <movable-view class='box' style='width:{{box_width}}rpx' friction="{{100}}" direction="horizontal" x="{{x}}" damping="{{500}}" bindchange="drag" bindtouchend="dragOver">
+      >>
+    </movable-view>
+    {{txt}}
+  </movable-area>
+  <view class='form-row'>
+    <image class='note' src='/assets/imgs/note.png'></image>
+    <input class='note-txt' placeholder='短信验证码'></input>
+    <button class='btn-note'>发送验证码</button>
+  </view>
+  <button class='register'>{{islogin==0?"注册":"登录"}}</button>
+  <view class='login'>
+  <checkbox class='box'></checkbox>
+  <text space='ensp'>我已同意用户协议及隐私政策  </text>
+  <text class='green' bindtap='handleLogin'>{{islogin==0?"直接登录":"立即注册"}}</text>
+  </view>
+</view>

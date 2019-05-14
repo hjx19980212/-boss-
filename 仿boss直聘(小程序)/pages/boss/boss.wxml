@@ -1,0 +1,37 @@
+<view class='wrap'>
+  <view class='home-banner'>
+    <view class='banner-a'>
+      <image mode="aspectFit" src='https://static.zhipin.com/zhipin/v154/h5/wap/images/home-search-text.png'>
+      </image>
+    </view>
+  </view>
+  <view class='search'>
+    <form>
+      <input class='ipt-search' value='' placeholder="搜索职位/公司" bindinput='handleIpt'></input>
+      <button class='btn-search' bindtap='handleSearch'>搜索</button>
+    </form>
+  </view>
+  <view class='main'>
+    <view class='job-category'>
+      <view class='job-item' wx:for="{{jobitem}}" wx:key="{{index}}" wx:for-item="itemName">
+        <image mode="aspectFit" src='{{itemName.iconimg}}'></image>
+        <text class='job-title'>{{itemName.subName}}</text>
+        <view class='job-dl'>
+          <view wx:for="{{itemName.career}}" wx:key="{{item.id}}" bindtap='handleSearchVal' data-val='{{item.name}}' data-kid='{{index}}'>{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='report-tips'>
+      <view>违法和不良信息举报邮箱：jubao@kanzhun.com</view>
+      <view>企业服务热线和举报投诉：400 065 5799</view>
+    </view>
+  </view>
+  <view class='h'></view>
+  <view class='download-bar'>
+    <view class='logo-text'>
+      <image src='https://static.zhipin.com/zhipin/v154/h5/wap/images/logo-x.png'></image>
+      <text>找工作要跟\n老板谈</text>
+    </view>
+    <button class='btn-register' bindtap='handleRegister'>立即注册</button>
+  </view>
+</view>

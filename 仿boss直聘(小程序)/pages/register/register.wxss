@@ -1,0 +1,161 @@
+.wrap {
+  position: relative;
+}
+
+.wrap .h3 {
+  padding: 30px 0 20px 0;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  color: #5dd5c8;
+  position: relative;
+  text-align: center;
+}
+
+.wrap form .form-row {
+  position: relative;
+  margin: 20px auto;
+  border: 1px solid #e3e7ed;
+  height: 40px;
+  line-height: 22px;
+  width: 90%;
+}
+
+.wrap form .form-row .phone {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 9px;
+  top: 11px;
+}
+
+.wrap form .form-row .dropdown-select {
+  position: absolute;
+  top: 1px;
+  left: 45px;
+  height: 40px;
+  z-index: 1;
+  display: inline-block;
+  font-style: normal;
+  cursor: pointer;
+  width: 37px;
+  padding: 7px 25px 7px 0;
+  border: 0;
+  text-align: right;
+  line-height: 26px;
+  color: #414a60;
+  font-size: 14px;
+}
+
+.wrap form .form-row .dropdown-select image {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+
+.wrap form .form-row .ipt-tel {
+  padding-left: 95px;
+  min-width: 0;
+  padding: 7px 110px;
+  border-color: #e3e7ed;
+  vertical-align: middle;
+  min-height: 22px;
+  line-height: 26px;
+  font-size: 14px;
+}
+
+.content {
+  margin: 0 auto;
+  margin-top: 50rpx;
+  height: 80rpx;
+  border: 1rpx solid #ddd;
+  background-color: #ddd;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 14px;
+  color: #414a60;
+}
+
+.box {
+  /* width: 120rpx; */
+  height: 80rpx;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 14px;
+  color: #414a60;
+}
+
+.wrap .form-row {
+  position: relative;
+  width: 90%;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1rpx solid #ddd;
+}
+
+.wrap .form-row .note {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 9px;
+  top: 11px;
+}
+
+.wrap .form-row .note-txt {
+  padding: 7px 40px;
+  border-color: #e3e7ed;
+  vertical-align: middle;
+  min-height: 22px;
+  line-height: 22px;
+  font-size: 13px;
+}
+
+.wrap .form-row .btn-note {
+  position: absolute;
+  right: 1px;
+  top: 3px;
+  font-size: 14px;
+  background-color: #fff;
+  background-position: 0 -356px;
+  min-width: 104px;
+  color: #5dd5c8;
+  z-index: 99;
+}
+
+.wrap .form-row .btn-note::after {
+  border: none;
+  border-left: 1px solid #5dd5c8;
+}
+
+.wrap .register {
+  width: 80%;
+  font-size: 16px;
+  height: 42px;
+  line-height: 42px;
+  border: none;
+  cursor: pointer;
+  min-width: 112px;
+  box-sizing: content-box;
+  color: #fff;
+  letter-spacing: 1px;
+  background: #5dd5c8;
+  text-align: center;
+   margin: 20px auto;
+}
+.wrap .register::after{
+  border: none;
+}
+.wrap .login{
+  width: 80%;
+  margin: 20px auto;
+}
+.wrap .login text{
+  font-size: 14px;
+}
+.wrap .login .green{
+      color: #18c3b1;
+}
